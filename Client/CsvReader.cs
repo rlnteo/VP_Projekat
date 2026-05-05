@@ -59,7 +59,7 @@ namespace Client
 
             try
             {
-                string[] p = line.Split(',');
+                string[] p = line.Split('\t');
 
                 if (p.Length < 19)
                 {
