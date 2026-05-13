@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
 
 namespace Client
@@ -59,7 +60,8 @@ namespace Client
 
             try
             {
-                string[] p = line.Split('\t');
+                char separator = line.Contains('\t') ? '\t' : ',';
+                string[] p = line.Split(separator);
 
                 if (p.Length < 19)
                 {
